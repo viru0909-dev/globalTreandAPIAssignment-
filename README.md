@@ -2,6 +2,14 @@
 
 A Java full-stack web application that integrates with public REST APIs (GitHub and JSONPlaceholder) to fetch, cache, filter, and display data with a modern, premium user interface.
 
+## 🚀 Live Demo
+
+**Deployed Application**: https://global-trend-api.onrender.com
+
+> **Note**: Deployed on Render's free tier. The app may take 30-60 seconds to wake up on first request after 15 minutes of inactivity. The GitHub API section may show rate limit errors (60 requests/hour). **Use the Posts API section for best demo experience.**
+
+---
+
 ## 📋 Assignment Overview
 
 This project demonstrates:
