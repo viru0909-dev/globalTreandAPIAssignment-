@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Global Trend API Integration - Fetch and display data from GitHub and JSONPlaceholder APIs">
+    <title>Global Trend - API Integration</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <h1>🌐 Global Trend</h1>
+                <p>API Integration Platform</p>
+            </div>
+            <nav class="nav">
+                <button class="nav-btn active" data-section="github">GitHub API</button>
+                <button class="nav-btn" data-section="posts">Posts API</button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            
+            <!-- GitHub Section -->
+            <section id="github-section" class="api-section active">
+                <div class="section-header">
+                    <h2>GitHub Users & Repositories</h2>
+                    <p>Browse GitHub users and their repositories</p>
+                </div>
+
+                <!-- Filters -->
+                <div class="filters-card">
+                    <div class="filter-group">
+                        <label for="github-since">Start From ID:</label>
+                        <input type="number" id="github-since" value="0" min="0">
+                    </div>
+                    <div class="filter-group">
+                        <label for="github-per-page">Per Page:</label>
+                        <select id="github-per-page">
+                            <option value="5">5</option>
+                            <option value="10" selected>10</option>
+                            <option value="20">20</option>
+                            <option value="30">30</option>
+                        </select>
+                    </div>
+                    <button class="btn-primary" onclick="fetchGitHubUsers()">
+                        <span class="btn-icon">🔍</span> Fetch Users
+                    </button>
+                </div>
+
+                <!-- Content Area -->
+                <div id="github-content" class="content-area">
+                    <div class="welcome-card">
+                        <div class="welcome-icon">👋</div>
+                        <h3>Welcome to GitHub Explorer</h3>
+                        <p>Click "Fetch Users" to start browsing GitHub users and their repositories</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Posts Section -->
+            <section id="posts-section" class="api-section">
+                <div class="section-header">
+                    <h2>Blog Posts & Users</h2>
+                    <p>Explore posts from JSONPlaceholder API</p>
+                </div>
+
+                <!-- Filters -->
+                <div class="filters-card">
+                    <div class="filter-group">
+                        <label for="post-user-id">Filter by User ID:</label>
+                        <input type="number" id="post-user-id" min="1" max="10" placeholder="Optional">
+                    </div>
+                    <div class="filter-group">
+                        <label for="post-limit">Limit Results:</label>
+                        <select id="post-limit">
+                            <option value="">All</option>
+                            <option value="5">5</option>
+                            <option value="10" selected>10</option>
+                            <option value="20">20</option>
+                            <option value="50">50</option>
+                        </select>
+                    </div>
+                    <button class="btn-primary" onclick="fetchPosts()">
+                        <span class="btn-icon">📝</span> Fetch Posts
+                    </button>
+                    <button class="btn-secondary" onclick="fetchUsers()">
+                        <span class="btn-icon">👥</span> View Users
+                    </button>
+                </div>
+
+                <!-- Content Area -->
+                <div id="posts-content" class="content-area">
+                    <div class="welcome-card">
+                        <div class="welcome-icon">📚</div>
+                        <h3>Welcome to Posts Explorer</h3>
+                        <p>Click "Fetch Posts" to view blog posts or "View Users" to see all users</p>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Global Trend - API Integration Internship Assignment</p>
+            <p class="footer-links">
+                <a href="https://api.github.com" target="_blank">GitHub API</a> • 
+                <a href="https://jsonplaceholder.typicode.com" target="_blank">JSONPlaceholder API</a>
+            </p>
+        </div>
+    </footer>
+
+    <!-- Loading Overlay -->
+    <div id="loading-overlay" class="loading-overlay hidden">
+        <div class="spinner"></div>
+        <p>Loading...</p>
+    </div>
+
+    <script src="js/app.js"></script>
+</body>
+</html>

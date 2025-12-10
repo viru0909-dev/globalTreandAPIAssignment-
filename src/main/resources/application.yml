@@ -1,0 +1,25 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: global-trend-api-integration
+  
+  cache:
+    type: simple
+    cache-names: github-users, github-repos, posts, users
+
+# API Configuration
+api:
+  github:
+    base-url: https://api.github.com
+    timeout: 10000
+  jsonplaceholder:
+    base-url: https://jsonplaceholder.typicode.com
+    timeout: 10000
+
+# Logging
+logging:
+  level:
+    com.globaltrend: DEBUG
+    org.springframework.web: INFO
