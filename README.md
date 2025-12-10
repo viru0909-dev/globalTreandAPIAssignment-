@@ -69,6 +69,22 @@ This project demonstrates:
 
 The application should start on port 8080 and display a startup message in the console.
 
+## 🌐 Deployment
+
+### Live Demo (Optional)
+
+Want to deploy this application to the cloud? See [DEPLOYMENT.md](DEPLOYMENT.md) for detailed instructions.
+
+**Quick Deploy to Render:**
+1. Create account at https://render.com
+2. Connect your GitHub repository
+3. Render auto-detects the `Dockerfile` and deploys
+4. Get a live URL like: `https://your-app.onrender.com`
+
+**Note:** The free tier spins down after 15 minutes of inactivity. First request may take 30-60 seconds to wake up.
+
+---
+
 ## 📡 API Endpoints
 
 ### GitHub API Endpoints
@@ -206,8 +222,12 @@ globalTreandAPIAssignment-/
 │   │           └── js/
 │   │               └── app.js                     # Frontend JavaScript
 ├── pom.xml                                        # Maven configuration
+├── Dockerfile                                     # Docker containerization
+├── render.yaml                                    # Render deployment config
+├── .dockerignore                                  # Docker build exclusions
 ├── .gitignore                                     # Git ignore rules
-└── README.md                                      # This file
+├── README.md                                      # This file
+└── DEPLOYMENT.md                                  # Deployment guide
 ```
 
 ## 🔍 Key Implementation Details

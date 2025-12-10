@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: global-trend-api
+    env: docker
+    region: oregon
+    plan: free
+    branch: main
+    healthCheckPath: /
+    envVars:
+      - key: JAVA_OPTS
+        value: "-Xmx512m -Xms256m"
+      - key: SERVER_PORT
+        value: 8080
